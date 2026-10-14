@@ -124,9 +124,10 @@ section.section { padding: 120px 0; }
   font-family: var(--font-head);
   font-size: 1.05rem;
   font-weight: 600;
+  transition: transform .2s var(--ease);
 }
-.logo-mark { color: var(--teal-300); display: flex; }
-.logo-text strong { font-weight: 800; }
+.logo:hover { transform: scale(1.05); }
+.logo-img { height: 50px; width: auto; display: block; }
 
 .main-nav { display: flex; align-items: center; gap: 30px; }
 .main-nav a {
@@ -463,6 +464,9 @@ section.section { padding: 120px 0; }
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-900); padding: 50px 0 30px; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.footer-logo { opacity: 0.8; transition: opacity .2s; }
+.footer-logo:hover { opacity: 1; }
+.footer-logo .logo-img { height: 40px; }
 .footer-tagline { color: rgba(255,255,255,0.55); font-size: 0.92rem; max-width: 460px; }
 .footer-copy { color: rgba(255,255,255,0.35); font-size: 0.82rem; margin-top: 10px; }
 
