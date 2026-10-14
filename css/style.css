@@ -128,6 +128,7 @@ section.section { padding: 120px 0; }
 }
 .logo:hover { transform: scale(1.08); }
 .logo-img { height: 60px; width: auto; display: block; max-width: 180px; }
+.nav-logo { display: none; }
 
 .main-nav { display: flex; align-items: center; gap: 30px; }
 .main-nav a {
@@ -611,6 +612,7 @@ section.section { padding: 120px 0; }
   }
 
   .nav-logo {
+    display: flex;
     flex: 1;
   }
 
