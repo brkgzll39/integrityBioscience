@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDnaHelix();
   initScrollReveal();
   initContactForm();
+  initLanguageToggle();
   document.getElementById('year').textContent = new Date().getFullYear();
 });
 
@@ -131,13 +132,49 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    const currentLang = localStorage.getItem('language') || 'tr';
     if (!form.checkValidity()) {
-      note.textContent = 'Lütfen zorunlu alanları doldurun.';
+      note.textContent = currentLang === 'tr' ? 'Lütfen zorunlu alanları doldurun.' : 'Please fill in all required fields.';
       note.style.color = '#e05d5d';
       return;
     }
     note.style.color = '';
-    note.textContent = 'Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağız.';
+    note.textContent = currentLang === 'tr' ? 'Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağız.' : 'Thank you for your message! We will get back to you shortly.';
     form.reset();
+  });
+}
+
+/* ---------- Language Toggle ---------- */
+function initLanguageToggle() {
+  const langButtons = document.querySelectorAll('.lang-btn');
+  const savedLang = localStorage.getItem('language') || 'tr';
+
+  // Set initial language
+  setLanguage(savedLang);
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      setLanguage(lang);
+      localStorage.setItem('language', lang);
+    });
+  });
+}
+
+function setLanguage(lang) {
+  // Update buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+  });
+
+  // Update all elements with data-tr and data-en
+  document.querySelectorAll('[data-tr][data-en]').forEach(el => {
+    const text = lang === 'tr' ? el.getAttribute('data-tr') : el.getAttribute('data-en');
+    if (el.children.length === 0) {
+      el.textContent = text;
+    } else {
+      el.firstChild?.nodeValue ? (el.firstChild.nodeValue = text) : null;
+    }
   });
 }
