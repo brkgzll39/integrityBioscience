@@ -27,6 +27,7 @@ function initHeader() {
 function initNavToggle() {
   const btn = document.getElementById('nav-toggle');
   const nav = document.getElementById('main-nav');
+  const closeBtn = document.getElementById('nav-close');
 
   btn.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
@@ -34,12 +35,16 @@ function initNavToggle() {
     btn.setAttribute('aria-expanded', String(isOpen));
   });
 
+  const closeNav = () => {
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  closeBtn.addEventListener('click', closeNav);
+
   nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      btn.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', closeNav);
   });
 }
 
