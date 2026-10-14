@@ -265,17 +265,14 @@ section.section { padding: 120px 0; }
   margin-bottom: 18px;
 }
 .hero h1 {
-  color: var(--navy-900);
+  color: #2ba5ab;
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   line-height: 1.12;
   font-weight: 700;
   margin-bottom: 24px;
 }
 .gradient-text {
-  background: linear-gradient(90deg, #2ba5ab, #0a1f3f);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #2ba5ab;
 }
 .hero-sub {
   color: var(--ink-700);
