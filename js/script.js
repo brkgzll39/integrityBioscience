@@ -177,4 +177,10 @@ function setLanguage(lang) {
       el.firstChild?.nodeValue ? (el.firstChild.nodeValue = text) : null;
     }
   });
+
+  // Update form input placeholders
+  document.querySelectorAll('[data-placeholder-tr][data-placeholder-en]').forEach(el => {
+    const placeholder = lang === 'tr' ? el.getAttribute('data-placeholder-tr') : el.getAttribute('data-placeholder-en');
+    el.setAttribute('placeholder', placeholder);
+  });
 }
