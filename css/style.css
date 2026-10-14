@@ -553,18 +553,19 @@ section.section { padding: 120px 0; }
 .site-footer { background: var(--navy-900); padding: 50px 0 30px; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
 .footer-logo {
-  opacity: 0.9;
+  opacity: 0.85;
   transition: opacity .2s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.05);
-  padding: 12px 24px;
-  border-radius: 12px;
-  backdrop-filter: blur(4px);
 }
-.footer-logo:hover { opacity: 1; background: rgba(255,255,255,0.08); }
-.footer-logo .logo-img { height: 45px; width: auto; max-width: 150px; }
+.footer-logo:hover { opacity: 1; }
+.footer-logo .logo-img {
+  height: 50px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
 .footer-tagline { color: rgba(255,255,255,0.55); font-size: 0.92rem; max-width: 460px; }
 .footer-copy { color: rgba(255,255,255,0.35); font-size: 0.82rem; margin-top: 10px; }
 
