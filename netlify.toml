@@ -1,0 +1,16 @@
+[build]
+  command = "echo 'Site built successfully'"
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "functions"
+
+# Form handling
+[[forms]]
+  name = "contact"
+  recipient = "info@integrity-bioscience.com"
