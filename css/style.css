@@ -160,7 +160,7 @@ section.section { padding: 120px 0; }
 .nav-cta:hover { background: var(--navy-900); transform: translateY(-1px); }
 
 .nav-toggle {
-  display: none;
+  display: none !important;
   flex-direction: column;
   gap: 5px;
   background: none;
