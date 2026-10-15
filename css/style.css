@@ -583,7 +583,7 @@ section.section { padding: 120px 0; }
   .mission-vision { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .main-nav {
     position: fixed;
     top: 0; right: 0;
