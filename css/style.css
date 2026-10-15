@@ -420,7 +420,7 @@ section.section { padding: 120px 0; }
 .services-grid { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
 .service-row {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 1fr;
   gap: 32px;
   padding: 38px 0;
   border-bottom: 1px solid var(--line);
