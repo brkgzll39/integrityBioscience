@@ -160,7 +160,7 @@ section.section { padding: 120px 0; }
 .nav-cta:hover { background: var(--navy-900); transform: translateY(-1px); }
 
 .nav-toggle {
-  display: none !important;
+  display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -668,7 +668,7 @@ section.section { padding: 120px 0; }
     background: rgba(255,255,255,0.3);
   }
 
-  .nav-toggle { display: none !important; }
+  .nav-toggle { display: flex; }
 
   .nav-toggle span {
     background: var(--navy-800);
