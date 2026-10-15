@@ -668,7 +668,7 @@ section.section { padding: 120px 0; }
     background: rgba(255,255,255,0.3);
   }
 
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: none !important; }
 
   .nav-toggle span {
     background: var(--navy-800);
