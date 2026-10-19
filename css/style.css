@@ -585,6 +585,7 @@ section.section { padding: 120px 0; }
   .about-grid, .partners-inner, .contact-inner { grid-template-columns: 1fr; }
   .products-inner { grid-template-columns: 1fr; gap: 30px; }
   .about-visual { order: -1; }
+  .focus-dna { order: 0; }
   .card-grid.focus-grid { grid-template-columns: repeat(2, 1fr); }
   .products-images { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .product-image { height: 300px; }
@@ -694,7 +695,6 @@ section.section { padding: 120px 0; }
 @media (max-width: 600px) {
   section.section { padding: 80px 0; }
   .nav-toggle { display: flex !important; }
-  .focus-dna { display: none; }
   .card-grid.focus-grid { grid-template-columns: 1fr; }
   .products-images { grid-template-columns: 1fr; gap: 24px; }
   .product-image { height: 380px; }
