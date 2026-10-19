@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initNavToggle();
   initDnaHelix();
+  initFocusDna();
   initScrollReveal();
   initContactForm();
   initLanguageToggle();
@@ -98,6 +99,63 @@ function initDnaHelix() {
     path.setAttribute('d', d.trim());
     path.setAttribute('fill', 'none');
     path.setAttribute('stroke', 'url(#strandA)');
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('opacity', opacity);
+    group.insertBefore(path, group.firstChild);
+  };
+
+  makeStrand(0, '0.75');
+  makeStrand(Math.PI, '0.35');
+}
+
+/* ---------- Generate decorative DNA helix in focus section ---------- */
+function initFocusDna() {
+  const group = document.getElementById('focus-dna-group');
+  if (!group) return;
+
+  const ns = 'http://www.w3.org/2000/svg';
+  const steps = 22;
+  const height = 800;
+  const amplitude = 85;
+  const centerX = 190;
+
+  for (let i = 0; i <= steps; i++) {
+    const y = (height / steps) * i;
+    const angle = (i / steps) * Math.PI * 4;
+    const x1 = centerX + Math.sin(angle) * amplitude;
+    const x2 = centerX + Math.sin(angle + Math.PI) * amplitude;
+
+    const rung = document.createElementNS(ns, 'line');
+    rung.setAttribute('x1', x1.toFixed(1));
+    rung.setAttribute('y1', y.toFixed(1));
+    rung.setAttribute('x2', x2.toFixed(1));
+    rung.setAttribute('y2', y.toFixed(1));
+    rung.setAttribute('stroke', 'rgba(26, 47, 74, 0.2)');
+    rung.setAttribute('stroke-width', '1.4');
+    group.appendChild(rung);
+
+    [x1, x2].forEach((x, idx) => {
+      const dot = document.createElementNS(ns, 'circle');
+      dot.setAttribute('cx', x.toFixed(1));
+      dot.setAttribute('cy', y.toFixed(1));
+      dot.setAttribute('r', idx === 0 ? '4.2' : '3.4');
+      dot.setAttribute('fill', idx === 0 ? 'url(#strandB)' : 'rgba(0, 153, 204, 0.4)');
+      group.appendChild(dot);
+    });
+  }
+
+  const makeStrand = (phaseOffset, opacity) => {
+    let d = '';
+    for (let i = 0; i <= steps; i++) {
+      const y = (height / steps) * i;
+      const angle = (i / steps) * Math.PI * 4 + phaseOffset;
+      const x = centerX + Math.sin(angle) * amplitude;
+      d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+    }
+    const path = document.createElementNS(ns, 'path');
+    path.setAttribute('d', d.trim());
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', 'url(#strandB)');
     path.setAttribute('stroke-width', '2');
     path.setAttribute('opacity', opacity);
     group.insertBefore(path, group.firstChild);
