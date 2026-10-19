@@ -689,6 +689,7 @@ section.section { padding: 120px 0; }
 
 @media (max-width: 600px) {
   section.section { padding: 80px 0; }
+  .nav-toggle { display: flex !important; }
   .card-grid.focus-grid { grid-template-columns: 1fr; }
   .products-images { grid-template-columns: 1fr; gap: 24px; }
   .product-image { height: 380px; }
