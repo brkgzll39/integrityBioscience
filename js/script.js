@@ -130,7 +130,7 @@ function initFocusDna() {
     rung.setAttribute('y1', y.toFixed(1));
     rung.setAttribute('x2', x2.toFixed(1));
     rung.setAttribute('y2', y.toFixed(1));
-    rung.setAttribute('stroke', 'rgba(26, 47, 74, 0.2)');
+    rung.setAttribute('stroke', 'rgba(26, 47, 74, 0.4)');
     rung.setAttribute('stroke-width', '1.4');
     group.appendChild(rung);
 
@@ -139,7 +139,7 @@ function initFocusDna() {
       dot.setAttribute('cx', x.toFixed(1));
       dot.setAttribute('cy', y.toFixed(1));
       dot.setAttribute('r', idx === 0 ? '4.2' : '3.4');
-      dot.setAttribute('fill', idx === 0 ? 'url(#strandB)' : 'rgba(0, 153, 204, 0.4)');
+      dot.setAttribute('fill', idx === 0 ? 'url(#strandB)' : 'rgba(0, 153, 204, 0.6)');
       group.appendChild(dot);
     });
   }
