@@ -483,7 +483,7 @@ section.section { padding: 120px 0; }
 
 /* ---------- News ---------- */
 .news { background: #ffffff; }
-.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; justify-items: center; }
+.news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; justify-items: center; }
 .news-card {
   background: #fff;
   border: 1px solid var(--line);
