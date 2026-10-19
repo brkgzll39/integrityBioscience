@@ -400,8 +400,7 @@ section.section { padding: 120px 0; }
 /* ---------- Focus cards ---------- */
 .focus { background: #ffffff; }
 .focus-head { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; }
-.focus-dna { height: 500px; opacity: 0.45; display: block; background: transparent; }
-.dna-svg { width: 100% !important; height: 100% !important; display: block !important; }
+.focus-dna { align-items: center; }
 .card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .card-grid.focus-grid { justify-items: center; }
 .focus-card {
@@ -596,7 +595,6 @@ section.section { padding: 120px 0; }
 
 @media (max-width: 768px) {
   .focus-head { grid-template-columns: 1fr; gap: 24px; }
-  .focus-dna { height: 300px; }
 
   .main-nav {
     position: fixed;
