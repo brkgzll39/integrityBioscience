@@ -159,6 +159,8 @@ section.section { padding: 120px 0; }
 }
 .nav-cta:hover { background: var(--navy-900); transform: translateY(-1px); }
 
+.nav-header { display: none; }
+
 .nav-toggle {
   display: none !important;
   flex-direction: column;
