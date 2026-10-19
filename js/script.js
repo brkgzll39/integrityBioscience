@@ -137,16 +137,15 @@ function initContactForm() {
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
     const currentLang = localStorage.getItem('language') || 'tr';
     if (!form.checkValidity()) {
+      e.preventDefault();
       note.textContent = currentLang === 'tr' ? 'Lütfen zorunlu alanları doldurun.' : 'Please fill in all required fields.';
       note.style.color = '#e05d5d';
       return;
     }
     note.style.color = '';
     note.textContent = currentLang === 'tr' ? 'Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağız.' : 'Thank you for your message! We will get back to you shortly.';
-    form.reset();
   });
 }
 
