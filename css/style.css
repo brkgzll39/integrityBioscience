@@ -594,6 +594,9 @@ section.section { padding: 120px 0; }
 }
 
 @media (max-width: 768px) {
+  .focus-head { grid-template-columns: 1fr; gap: 24px; }
+  .focus-dna { height: 300px; }
+
   .main-nav {
     position: fixed;
     top: 0; right: 0;
@@ -692,6 +695,7 @@ section.section { padding: 120px 0; }
 @media (max-width: 600px) {
   section.section { padding: 80px 0; }
   .nav-toggle { display: flex !important; }
+  .focus-dna { display: none; }
   .card-grid.focus-grid { grid-template-columns: 1fr; }
   .products-images { grid-template-columns: 1fr; gap: 24px; }
   .product-image { height: 380px; }
