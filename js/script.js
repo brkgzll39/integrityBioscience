@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDnaHelix();
   initScrollReveal();
   initContactForm();
+  initNewsletterForm();
   initLanguageToggle();
   initArticleModal();
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -147,6 +148,27 @@ function initContactForm() {
     }
     note.style.color = '';
     note.textContent = currentLang === 'tr' ? 'Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağız.' : 'Thank you for your message! We will get back to you shortly.';
+  });
+}
+
+/* ---------- Newsletter signup ---------- */
+function initNewsletterForm() {
+  const form = document.getElementById('newsletter-form');
+  const note = document.getElementById('newsletter-note');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const tr = (localStorage.getItem('language') || 'tr') === 'tr';
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error();
+      form.reset();
+      note.textContent = tr ? 'Teşekkürler! Kaydınız alındı.' : 'Thank you! You are subscribed.';
+      note.style.color = '';
+    } catch (err) {
+      note.textContent = tr ? 'Bir hata oluştu, lütfen tekrar deneyin.' : 'Something went wrong, please try again.';
+      note.style.color = '#e05d5d';
+    }
   });
 }
 

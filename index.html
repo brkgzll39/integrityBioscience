@@ -313,7 +313,7 @@
       <div class="section-head">
         <p class="section-eyebrow" data-tr="Bülten" data-en="News">Bülten</p>
         <h2 data-tr="Son Gelişmeler ve Haberler" data-en="Latest Updates and News">Son Gelişmeler ve Haberler</h2>
-        <p class="section-sub" data-tr="Bülten bölümü yapım aşamasındadır. Yakında sizin için güncellemeler ve araştırma haberlerini paylaşacağız." data-en="Our news section is currently under development. We will be sharing updates and research news with you soon.">Bülten bölümü yapım aşamasındadır. Yakında sizin için güncellemeler ve araştırma haberlerini paylaşacağız.</p>
+        <p class="section-sub" data-tr="Moleküler tanı ve biyoteknoloji alanından bilgilendirici yazılar ve gelişmeler." data-en="Informative articles and updates from molecular diagnostics and biotechnology.">Moleküler tanı ve biyoteknoloji alanından bilgilendirici yazılar ve gelişmeler.</p>
       </div>
 
       <div class="news-grid">
@@ -322,8 +322,34 @@
           <h3 data-tr="Fransa'da Köpeklerde Kene Kaynaklı Kan Patojenleri Tespit Edildi" data-en="Tick-borne Blood Pathogens Detected in Dogs in France">Fransa'da Köpeklerde Kene Kaynaklı Kan Patojenleri Tespit Edildi</h3>
           <p data-tr="One Health dergisinde yayımlanan araştırma, Fransa'daki köpeklerde kene kaynaklı enfeksiyöz etkenlerin varlığını ortaya koydu. 34 bölgeden 41 klinikte 82 köpek incelendi ve 13 köpekte (%16) Babesia canis, Borrelia garinii, Anaplasma ve Ehrlichia spp. gibi patojenlere ilişkin pozitif bulgu elde edildi. Araştırma, kene kaynaklı enfeksiyonların izlenmesinde ve erken tanıda moleküler yöntemlerin önemini vurgulamaktadır." data-en="A study published in the One Health journal revealed the presence of tick-borne infectious agents in dogs in France. Dogs from 41 clinics across 34 regions were examined, with positive findings for pathogens such as Babesia canis, Borrelia garinii, Anaplasma, and Ehrlichia spp. in 13 dogs (16%). The research emphasizes the importance of molecular methods in monitoring tick-borne infections and early diagnosis.">Fransa'da Köpeklerde Kene Kaynaklı Kan Patojenleri Tespit Edildi</p>
         </article>
+        <a class="news-card news-link" href="blog/pcr-nedir.html">
+          <div class="news-date">19 Ekim 2026</div>
+          <h3>PCR Nedir? Moleküler Tanıda Temel Yöntem</h3>
+          <p>PCR (polimeraz zincir reaksiyonu) nedir, nasıl çalışır ve veteriner tanı, gıda güvenliği ve araştırmada neden bu kadar yaygın kullanılır? Temel bilgiler.</p>
+        </a>
+        <a class="news-card news-link" href="blog/kene-kaynakli-patojenler.html">
+          <div class="news-date">19 Ekim 2026</div>
+          <h3>Kene Kaynaklı Hastalıklar ve Moleküler Tanının Rolü</h3>
+          <p>Kene kaynaklı patojenler hayvan ve insan sağlığını nasıl etkiler? Babesia, Borrelia ve Anaplasma gibi etkenlerin tespitinde moleküler tanının önemi.</p>
+        </a>
+        <a class="news-card news-link" href="blog/gida-guvenliginde-molekuler-tani.html">
+          <div class="news-date">19 Ekim 2026</div>
+          <h3>Gıda Güvenliğinde Moleküler Tanı Yöntemleri</h3>
+          <p>Gıdalarda patojen tespiti ve doğrulama için moleküler yöntemler: PCR tabanlı testlerin klasik kültür yöntemlerine göre avantajları.</p>
+        </a>
 
       </div>
+
+      <form class="newsletter-form" id="newsletter-form" action="https://formspree.io/f/xzedwwrj" method="POST">
+        <input type="hidden" name="_subject" value="Bülten kaydı">
+        <input type="hidden" name="form_type" value="bulten-kaydi">
+        <label for="newsletter-email" data-tr="Yeni yazılardan haberdar olmak için e-posta adresinizi bırakın" data-en="Leave your email to be notified about new articles">Yeni yazılardan haberdar olmak için e-posta adresinizi bırakın</label>
+        <div class="newsletter-row">
+          <input type="email" id="newsletter-email" name="email" required placeholder="ornek@sirket.com">
+          <button type="submit" class="btn btn-primary" data-tr="Abone Ol" data-en="Subscribe">Abone Ol</button>
+        </div>
+        <p class="newsletter-note" id="newsletter-note" role="status"></p>
+      </form>
     </div>
   </section>
 
