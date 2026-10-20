@@ -845,4 +845,3 @@ a.news-link { display: block; color: inherit; text-decoration: none; }
 .blog-cta { margin-top: 40px; padding: 20px 24px; border-radius: var(--radius-md); background: rgba(43,165,171,0.08); }
 .blog-cta a { color: var(--teal-400); font-weight: 600; }
 @media (max-width: 600px) { .newsletter-row { flex-direction: column; } }
-.footer-social a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
